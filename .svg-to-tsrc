@@ -1,0 +1,15 @@
+{
+    "conversionType": "files",
+    "srcFiles": [
+        "./svg-icons/**/*.svg"
+    ],
+    "outputDirectory": "./dist/icons",
+    "interfaceName": "angular1r",
+    "typeName": "angular1r",
+    "prefix": "angular1r",
+    "generateType": true,
+    "exportCompleteIconSet": true,
+    "optimizeForLazyLoading": true,
+    "modelFileName": "angular1r.model",
+    "compileSources": true
+}

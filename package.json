@@ -1,0 +1,45 @@
+{
+  "name": "1riconstore",
+  "version": "1.0.0",
+  "description": "angular icon library test",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build:library": "npm run transform-icons && npm run copy-library-assets",
+    "build:showcase": "npm run build:library && npm run bundle-showcase && npm run copy-showcase-files",
+    "bundle-showcase": "webpack --config ./showcase/webpack.config.js",
+    "commit": "git-cz",
+    "copy-showcase-files": "cpx showcase/index.html dist/showcase && cpx showcase/styles.css dist/showcase",
+    "copy-library-assets": "cpx package.json dist/icons && cpx README.md dist/icons",
+    "transform-icons": "svg-to-ts",
+    "serve": "npm run build:showcase && http-server ./dist/showcase -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrunalsen/angular-svg-to-ts.git"
+  },
+  "keywords": [
+    "svg",
+    "icons",
+    "library",
+    "test"
+  ],
+  "author": "Mrunal Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrunalsen/angular-svg-to-ts/issues"
+  },
+  "homepage": "https://github.com/mrunalsen/angular-svg-to-ts#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-loader": "^9.1.3",
+    "cpx": "^1.5.0",
+    "git-cz": "^4.9.0",
+    "npm-run-all": "^4.1.5",
+    "svg-to-ts": "^6.0.0",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
